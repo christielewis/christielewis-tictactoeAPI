@@ -32,7 +32,28 @@ const onSignIn = function(e) {
         .catch(() => authUi.onSignInFailure())
 }
 
+const onChangePW = function(e) {
+    e.preventDefault()
+
+    const form = e.target
+    const data = getFormFields(form)
+
+    authApi
+        .signIn(data)
+        .then((response) => authUi.onChangePWSuccess(response))
+        .catch(() => authUi.onChangePWFailure())
+}
+
+const onSignOut = function() {
+    authApi
+        .signOut()
+        .then(() => authUi.onSignOutSuccess())
+        .catch(() => authUi.onSignOutFailure())
+}
+
 module.exports = {
     onSignUp,
-    onSignIn
+    onSignIn,
+    onChangePW,
+    onSignOut
 }

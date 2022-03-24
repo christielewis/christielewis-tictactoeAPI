@@ -19,9 +19,32 @@ const onSignInFailure = function() {
     $('#auth-status-sign-in').html('<p>There was an error signing in.<br>Try again!</p>')
 }
 
+const onChangePWSuccess = function() {
+    $('#auth-status-change-pw').html('<p>Password Successfully Changed!</p>')
+    $('form').trigger('reset')
+}
+
+const onChangePWFailure = function() {
+    $('#auth-status-change-pw').html('<p>Error.<br>Try again!</p>')
+}
+
+const onSignOutSuccess = function() {
+    $('#auth-status-sign-out').html('<p>Password Successfully Changed!</p>')
+    $('form').trigger('reset')
+}
+
+const onSignOutFailure = function() {
+    $('#auth-status-sign-out').html('<p>Error.<br>Try again!</p>')
+}
+
+
 module.exports = {
     onSignUpSuccess,
     onSignUpFailure,
     onSignInSuccess,
-    onSignInFailure
+    onSignInFailure,
+    onChangePWSuccess,
+    onChangePWFailure,
+    onSignOutSuccess,
+    onSignOutFailure
 }

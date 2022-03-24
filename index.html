@@ -34,24 +34,18 @@
           <section id="auth-status-sign-in"></section>
         </form>
       </div>
-
-      <div>
-        <h3>Sign Out</h3>
-        <button id="sign-out-btn">Sign Out</button>
-        <section id="auth-status-sign-out"></section>
-      </div>
-
+      
       <div>
         <h3>Change Password</h3>
         <form id="change-pw-form">
           <input type="password" name="passwords[old]" placeholder="Enter old password">
           <input type="password" name="passwords[new]" placeholder="Enter new password">
-          <button type="submit">Change Password</button>
+          <button type="submit">Change</button>
         </form>
         <section id="auth-status-change-pw"></section>
       </div>
-
-
+      
+      
       <div id="game-grid">
         <div class="box" id="sq-1"></div>
         <div class="box" id="sq-2"></div>
@@ -62,8 +56,16 @@
         <div class="box" id="sq-7"></div>
         <div class="box" id="sq-8"></div>
         <div class="box" id="sq-9"></div>
-    </div>
-    <h2 class="game-status"></h2>
-    <button class="game-restart">Restart Game</button>
+      </div>
+
+      <h2 class="game-status"></h2>
+      <button class="game-start">Start</button>
+      <button class="game-restart">Restart</button>
+
+      <div>
+        <h3>Quitting Already?</h3>
+        <button id="sign-out-btn">Sign Out</button>
+        <section id="auth-status-sign-out"></section>
+      </div>
     </body>
 </html>
