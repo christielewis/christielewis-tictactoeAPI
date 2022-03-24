@@ -21,6 +21,7 @@
           <input type="password" name="credentials[password]" placeholder="Enter password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Re-enter password">
           <button type="submit">Sign Up</button>
+          <section id="auth-status-sign-up"></section>
         </form>
       </div>
 
@@ -30,12 +31,14 @@
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
           <input type="password" name="credentials[password]" placeholder="Enter password">
           <button type="submit">Sign In</button>
+          <section id="auth-status-sign-in"></section>
         </form>
       </div>
 
       <div>
         <h3>Sign Out</h3>
         <button id="sign-out-btn">Sign Out</button>
+        <section id="auth-status-sign-out"></section>
       </div>
 
       <div>
@@ -45,9 +48,9 @@
           <input type="password" name="passwords[new]" placeholder="Enter new password">
           <button type="submit">Change Password</button>
         </form>
+        <section id="auth-status-change-pw"></section>
       </div>
 
-      <section id="auth-status"></section>
 
       <div id="game-grid">
         <div class="box" id="sq-1"></div>
