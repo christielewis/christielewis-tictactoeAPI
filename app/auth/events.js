@@ -11,7 +11,7 @@ const onSignUp = function(e) {
     console.log(data);
 
     if(data.credentials.password !== data.credentials.password_confirmation) {
-        $('#auth-status').html('<p>Passwords entered do not match <br>Try again!</p>');
+        $('#auth-status').html('<p>Passwords entered do not match.<br>Try again!</p>');
     } else {
         authApi
             .signUp(data)

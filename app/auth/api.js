@@ -4,7 +4,7 @@ const signUp = function (data) {
     console.log(store)
     return $.ajax({
         method: 'POST',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
+        url: 'https://tic-tac-toe-api-production.herokuapp.com/sign-up',
         data
     })
 }
