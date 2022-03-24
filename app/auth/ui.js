@@ -8,3 +8,8 @@ const onSignUpSuccess = function() {
 const onSignUpFailure = function() {
     $('#auth-status').html('<p>There was an error signing up.<br>Try again!</p>')
 }
+
+module.exports = {
+    onSignUpSuccess,
+    onSignUpFailure
+}
