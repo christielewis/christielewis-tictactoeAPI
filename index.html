@@ -12,6 +12,39 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
+      <h2>Some message about sign in/sign up</h2>
+      <div>
+        <h3>Sign Up</h3>
+        <form id="sign-up-form">
+          <input type="email" name="credentials[email]" placeholder="Enter valid email">
+          <input type="password" name="credentials[password]" placeholder="Enter password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Re-enter password">
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <div>
+        <h3>Sign In</h3>
+        <form id="sign-in-form">
+          <input type="email" name="credentials[email]" placeholder="Enter valid email">
+          <input type="password" name="credentials[password]" placeholder="Enter password">
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div>
+        <h3>Sign Out</h3>
+        <button id="sign-out-btn">Sign Out</button>
+      </div>
+
+      <div>
+        <h3>Change Password</h3>
+        <form id="change-pw-form">
+          <input type="password" name="passwords[old]" placeholder="Enter old password">
+          <input type="password" name="passwords[new]" placeholder="Enter new password">
+          <button type="submit">Change Password</button>
+        </form>
+      </div>
     </body>
 </html>
