@@ -1,4 +1,4 @@
-// const store = require('../store.js')
+const store = require('../store.js')
 
 const signUp = function (data) {
     console.log(store)
@@ -10,5 +10,5 @@ const signUp = function (data) {
 }
 
 module.exports = {
-    signUp,
+    signUp
 }
