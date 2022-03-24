@@ -6,7 +6,6 @@ const signUp = function (data) {
         method: 'POST',
         url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
         data
-        // same as data: data
     })
 }
 
@@ -15,7 +14,6 @@ const signIn = function (data) {
         method: 'POST',
         url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
         data
-        // same as data: data
     })
 }
 
@@ -27,7 +25,6 @@ const changePassword = function (data) {
             Authorization: 'Bearer ' + store.user.token
         },
         data
-        // same as data: data
     })
 }
 
