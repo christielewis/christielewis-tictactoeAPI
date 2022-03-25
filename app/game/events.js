@@ -1,28 +1,6 @@
-const { FALSE } = require('node-sass')
+// const { FALSE } = require('node-sass')
 const gameApi = require('./api.js')
 const gameUi = require('./ui.js')
-
-const mark = function(sq) {
-    let num = 0
-    // let turn = true
-
-    // if(turn) {
-    //     sq.innerText = "X"
-    //     turn = false
-    // } else {
-    //     sq.innerText = "O"
-    //     turn = true
-    // }
-
-    if(num % 2 === 0) {
-        sq.innerText = "X";
-    } else {
-        sq.innerText = "O"
-    }
-    num++
-    gameUi.onWin()
-    gameUi.onDraw()
-}
 
 const selectedSq = function(e) {
     e.preventDefault()
@@ -32,6 +10,24 @@ const selectedSq = function(e) {
         return
     }
     mark(targetSq)
+    // console.log('selectedSq')
+    // gameUi.onMark(targetSq)
+    gameUi.onWin()
+    gameUi.onDraw()
+}
+
+// let turn = true
+let num = 0
+const mark = function(sq) {
+    if(num % 2 === 0) {
+        sq.innerText = "X"
+    } else {
+        sq.innerText = "O"
+    }
+    num++
+    // console.log(num)
+    gameUi.onWin()
+    gameUi.onDraw()
 }
 
 module.exports = {
