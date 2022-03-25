@@ -13,14 +13,6 @@ $(() => {
   $('#sign-out-form').on('submit', authEvents.onSignOut)
 
   $('#game-grid').on('click', gameEvents.selectedSq)
-
-  // $('#sq-0').on('click', gameEvents.mark)
-  // $('#sq-1').on('click', gameEvents.mark)
-  // $('#sq-2').on('click', gameEvents.mark)
-  // $('#sq-3').on('click', gameEvents.mark)
-  // $('#sq-4').on('click', gameEvents.mark)
-  // $('#sq-5').on('click', gameEvents.mark)
-  // $('#sq-6').on('click', gameEvents.mark)
-  // $('#sq-7').on('click', gameEvents.mark)
-  // $('#sq-8').on('click', gameEvents.mark)
+  $('.game-start').on('click', gameEvents.onNewGame)
+  
 })

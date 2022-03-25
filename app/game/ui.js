@@ -63,6 +63,22 @@ const onDraw = function() {
     }
 }
 
+// const onNewGame = function() {
+//     $('#sq-0').text('')
+//     $('#sq-1').text('')
+//     $('#sq-2').text('')
+//     $('#sq-3').text('')
+//     $('#sq-4').text('')
+//     $('#sq-5').text('')
+//     $('#sq-6').text('')
+//     $('#sq-7').text('')
+//     $('#sq-8').text('')
+
+//     $('.game-status').text('')
+//     $('#game-grid').on('click', gameEvents.selectedSq)
+// }
+
+
 module.exports = {
     onWin,
     onDraw
