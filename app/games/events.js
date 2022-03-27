@@ -29,6 +29,9 @@ const mark = function(sq) {
 }
 
 const onNewGame = function() {
+
+    num = 0
+
     $('#sq-0').text('')
     $('#sq-1').text('')
     $('#sq-2').text('')

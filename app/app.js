@@ -9,8 +9,8 @@ $(() => {
   // your JS code goes here
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#change-pw-form').on('submit', authEvents.onChangePW)
   $('#sign-out-form').on('submit', authEvents.onSignOut)
+  // $('#change-pw-form').on('submit', authEvents.onChangePW)
 
   $('#game-grid').on('click', gameEvents.selectedSq)
   $('.new-game').on('click', gameEvents.onNewGame)

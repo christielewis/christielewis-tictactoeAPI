@@ -14,7 +14,7 @@
     <body>
       <h1>🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
       <h2>Some message about sign in/sign up</h2>
-      <div>
+      <div id="sign-up">
         <h3>Sign Up</h3>
         <form id="sign-up-form">
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
@@ -25,7 +25,7 @@
         </form>
       </div>
 
-      <div>
+      <div id="sign-in">
         <h3>Sign In</h3>
         <form id="sign-in-form">
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
@@ -56,17 +56,57 @@
           <div data-sq-idx="6" class="sq" id="sq-6"></div>
           <div data-sq-idx="7" class="sq" id="sq-7"></div>
           <div data-sq-idx="8" class="sq" id="sq-8"></div>
-        </div>
-  
-        <h2 class="game-status"></h2>
-        <button class="new-game">New Game</button>
-        <!-- <button class="game-restart">Restart</button> -->
-      </div>
 
-      <div>
+          </div>
+            <h2 class="game-status"></h2>
+            <button class="new-game">New Game</button>
+            <!-- <button class="game-restart">Restart</button> -->
+          </div>
+        </div>
+
+      <div id="sign-out">
         <h3>Quitting Already?</h3>
         <button id="sign-out-btn">Sign Out</button>
         <section id="auth-status-sign-out"></section>
       </div>
+      
+      
+      <!-- <div>
+        <h3>Index Games</h3>
+        <button id="games">Get games</button>
+      </div> -->
+
+      <!-- <div>
+        <h3>Create Game</h3>
+        <form id="create-game">
+          <input type="text" name="game[id]" placeholder="Game ID">
+          <input type="text" name="game[owner]" placeholder="Game owner">
+          <input type="text" name="game[sq]" placeholder="Game square">
+          <input type="text" name="game[sq][idx]" placeholder="Game square index">
+          <input type="text" name="game[sq][value]" placeholder="Game square value">
+          <button class="new-game">New Game</button>
+        </form>
+      </div> -->
+
+      <!-- <div>
+        <h3>Show Game</h3>
+        <form id="show-game">
+          <input type="text" name="id" placeholder="Game ID">
+          <button type="submit">Show Game</button>
+        </form>
+      </div> -->
+
+      <!-- <div>
+        <h3>Update Game</h3>
+        <form id="update-game">
+          <input type="text" name="game[id]" placeholder="Game ID">
+          <input type="text" name="game[owner]" placeholder="Game owner">
+          <input type="text" name="game[sq]" placeholder="Game square">
+          <input type="text" name="game[sq][idx]" placeholder="Game square index">
+          <input type="text" name="game[sq][value]" placeholder="Game square value">
+          <input type="submit" class="new-game" value ='Update Game'>
+        </form> -->
+      <!-- game API -->
+      
     </body>
 </html>

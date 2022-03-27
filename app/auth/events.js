@@ -10,11 +10,15 @@ const onSignUp = function(e) {
     const data = getFormFields(form)
     console.log(data)
 
+    // $('#sign-up').hide()
+    // $('#sign-in').show()
+    // $('#sign-out').hide()
+    // $('#games').hide()
+
     if(data.credentials.password !== data.credentials.password_confirmation) {
         $('#auth-status-sign-up').html('<p>Passwords entered do not match.<br>Try again!</p>');
     } else {
-        authApi
-            .signUp(data)
+        authApi.signUp(data)
             .then(() => authUi.onSignUpSuccess())
             .catch(() => authUi.onSignUpFailure())
     }
@@ -25,26 +29,37 @@ const onSignIn = function(e) {
 
     const form = e.target
     const data = getFormFields(form)
+    console.log(data)
 
-    authApi
-        .signIn(data)
+    // $('#sign-up').hide()
+    // $('#sign-in').hide()
+    // $('#sign-out').show()
+    // $('#games').show()
+    
+    authApi.signIn(data)
         .then((response) => authUi.onSignInSuccess(response))
         .catch(() => authUi.onSignInFailure())
 }
 
-const onChangePW = function(e) {
-    e.preventDefault()
+// const onChangePW = function(e) {
+//     e.preventDefault()
 
-    const form = e.target
-    const data = getFormFields(form)
+//     const form = e.target
+//     const data = getFormFields(form)
 
-    authApi
-        .signIn(data)
-        .then((response) => authUi.onChangePWSuccess(response))
-        .catch(() => authUi.onChangePWFailure())
-}
+//     authApi
+//         .signIn(data)
+//         .then((response) => authUi.onChangePWSuccess(response))
+//         .catch(() => authUi.onChangePWFailure())
+// }
 
 const onSignOut = function() {
+
+    // $('#sign-up').show()
+    // $('#sign-in').show()
+    // $('#sign-out').hide()
+    // $('#games').hide()
+
     authApi
         .signOut()
         .then(() => authUi.onSignOutSuccess())
@@ -54,6 +69,6 @@ const onSignOut = function() {
 module.exports = {
     onSignUp,
     onSignIn,
-    onChangePW,
     onSignOut
+    // onChangePW,
 }
