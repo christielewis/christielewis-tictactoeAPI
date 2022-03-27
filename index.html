@@ -35,7 +35,7 @@
         </form>
       </div>
       
-      <div>
+      <!-- <div>
         <h3>Change Password</h3>
         <form id="change-pw-form">
           <input type="password" name="passwords[old]" placeholder="Enter old password">
@@ -43,23 +43,23 @@
           <button type="submit">Change</button>
         </form>
         <section id="auth-status-change-pw"></section>
-      </div>
+      </div> -->
       
       <div id="games">
         <div id="game-grid">
-          <div class="box" id="sq-0"></div>
-          <div class="box" id="sq-1"></div>
-          <div class="box" id="sq-2"></div>
-          <div class="box" id="sq-3"></div>
-          <div class="box" id="sq-4"></div>
-          <div class="box" id="sq-5"></div>
-          <div class="box" id="sq-6"></div>
-          <div class="box" id="sq-7"></div>
-          <div class="box" id="sq-8"></div>
+          <div data-sq-idx="0" class="sq" id="sq-0"></div>
+          <div data-sq-idx="1" class="sq" id="sq-1"></div>
+          <div data-sq-idx="2" class="sq" id="sq-2"></div>
+          <div data-sq-idx="3" class="sq" id="sq-3"></div>
+          <div data-sq-idx="4" class="sq" id="sq-4"></div>
+          <div data-sq-idx="5" class="sq" id="sq-5"></div>
+          <div data-sq-idx="6" class="sq" id="sq-6"></div>
+          <div data-sq-idx="7" class="sq" id="sq-7"></div>
+          <div data-sq-idx="8" class="sq" id="sq-8"></div>
         </div>
   
         <h2 class="game-status"></h2>
-        <button class="game-start">New Game</button>
+        <button class="new-game">New Game</button>
         <!-- <button class="game-restart">Restart</button> -->
       </div>
 

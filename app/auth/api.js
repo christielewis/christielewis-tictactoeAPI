@@ -18,17 +18,17 @@ const signIn = function(data) {
     })
 }
 
-const changePW = function(data) {
-    console.log(store)
-    return $.ajax({
-        method: 'PATCH',
-        url: 'https://tic-tac-toe-api-production.herokuapp.com/change-pw',
-        headers: {
-            Authorization: 'Bearer ' + store.user.token
-        },
-        data
-    })
-}
+// const changePW = function(data) {
+//     console.log(store)
+//     return $.ajax({
+//         method: 'PATCH',
+//         url: 'https://tic-tac-toe-api-production.herokuapp.com/change-pw',
+//         headers: {
+//             Authorization: 'Bearer ' + store.user.token
+//         },
+//         data
+//     })
+// }
 
 const signOut = function() {
     return $.ajax({

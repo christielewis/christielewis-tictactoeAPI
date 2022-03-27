@@ -1,5 +1,5 @@
 const gameEvents = require('./events.js')
-
+// create an array to store moves then iterate through it to see if game is over or not
 const onWin = function() {
     let sq0 = $('#sq-0').text();
     let sq1 = $('#sq-1').text();
@@ -12,7 +12,7 @@ const onWin = function() {
     let sq8 = $('#sq-8').text();
 
     if(sq0 !== "" && sq0 === sq1 && sq0 === sq2) {
-        $('.game-status').text(`${$('#sq-0').text()} is the winner!`)
+        $('.game-status').text(`${sq0} is the winner!`)
         $('#game-grid').off('click', gameEvents.selectedSq)
         return;
     } else if(sq0 !== "" && sq0 === sq3 && sq0 === sq6) {
