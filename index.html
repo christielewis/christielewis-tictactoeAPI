@@ -12,9 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
-      <h2>Some message about sign in/sign up</h2>
-      <div id="sign-up">
+      <div id="welcome-pg">
+        <h1 id="title">🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
+        <h2>New here? Sign up! <br>Returning? Sign in!</h2>
+        <!-- <button id="welcome-sign-up">Sign Up</button>
+        <button id="welcome-sign-in">Sign In</button> -->
+      </div>
+
+      <div class="hidden" id="sign-up">
         <h3>Sign Up</h3>
         <form id="sign-up-form">
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
@@ -25,7 +30,7 @@
         </form>
       </div>
 
-      <div id="sign-in">
+      <div class="hidden" id="sign-in">
         <h3>Sign In</h3>
         <form id="sign-in-form">
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
@@ -45,7 +50,7 @@
         <section id="auth-status-change-pw"></section>
       </div> -->
       
-      <div id="games">
+      <div class="hidden" id="games">
         <div id="game-grid">
           <div data-sq-idx="0" class="sq" id="sq-0"></div>
           <div data-sq-idx="1" class="sq" id="sq-1"></div>
@@ -64,7 +69,7 @@
           </div>
         </div>
 
-      <div id="sign-out">
+      <div class="hidden" id="sign-out">
         <h3>Quitting Already?</h3>
         <button id="sign-out-btn">Sign Out</button>
         <section id="auth-status-sign-out"></section>

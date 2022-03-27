@@ -2,6 +2,34 @@ const authApi = require('./api.js')
 const authUi = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
+// const onWelcome = function() {
+//     $('#welcome-pg').show()
+//     $('#welcome-sign-up').show()
+//     $('#welcome-sign-in').show()
+//     $('#sign-up').hide()
+//     $('#sign-in').hide()
+//     $('#sign-out').hide()
+//     $('#games').hide()
+// }
+
+// const onWelcomeSignUp = function() {
+//     $('#welcome-pg').hide()
+//     $('#welcome-sign-up').hide()
+//     $('#welcome-sign-in').hide()
+//     $('#sign-up').hide()
+//     $('#sign-in').hide()
+//     $('#sign-out').hide()
+//     $('#games').hide()
+// }
+
+// const onWelcomeSignIn = function() {
+//     $('#welcome-pg').show()
+//     $('#sign-up').hide()
+//     $('#sign-in').hide()
+//     $('#sign-out').hide()
+//     $('#games').hide()
+// }
+
 const onSignUp = function(e) {
     e.preventDefault()
     // console.log('yerrrrr');
@@ -10,6 +38,8 @@ const onSignUp = function(e) {
     const data = getFormFields(form)
     console.log(data)
 
+    // $('#welcome-pg').show()
+    // $('#title').show()
     // $('#sign-up').hide()
     // $('#sign-in').show()
     // $('#sign-out').hide()
@@ -27,10 +57,13 @@ const onSignUp = function(e) {
 const onSignIn = function(e) {
     e.preventDefault()
 
+    // $('#sign').toggleClass('hidden')
     const form = e.target
     const data = getFormFields(form)
     console.log(data)
 
+    // $('#welcome-pg').hide()
+    // $('#title').show()
     // $('#sign-up').hide()
     // $('#sign-in').hide()
     // $('#sign-out').show()

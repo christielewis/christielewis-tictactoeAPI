@@ -29,8 +29,9 @@ const onChangePWFailure = function() {
 }
 
 const onSignOutSuccess = function() {
-    $('#auth-status-sign-out').html('<p>Password Successfully Changed!</p>')
+    $('#auth-status-sign-out').html('<p>Signed Out Successfully !</p>')
     $('form').trigger('reset')
+    store.user = null
 }
 
 const onSignOutFailure = function() {
