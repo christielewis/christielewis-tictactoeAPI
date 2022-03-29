@@ -1,5 +1,6 @@
 // const { FALSE } = require('node-sass')
-const getFormFields = require('../../lib/get-form-fields.js')
+// const getFormFields = require('../../lib/get-form-fields.js')
+const store = require("../store")
 const gameApi = require('./api.js')
 const gameUi = require('./ui.js')
 
@@ -11,35 +12,54 @@ const selectedSq = function(e) {
         return
     }
     mark(targetSq)
+
+    let sqIdx = $(e.target).data('sq-idx')
+    // console.log(store)
+    let gameStatus = store.game.over
+
+    gameApi
+        .updateGame(sqIdx, targetSq.innerText, gameStatus)
+        .then((response) => gameUi.onUpdateSuccess(response))
+
+    
+
 }
 
 let num = 0
+// let turn = true
 const mark = function(sq) {
+    console.log(num)
+
     if(num % 2 === 0) {
         sq.innerText = "X"
     } else {
         sq.innerText = "O"
     }
-    num++
+    num ++
     
     gameUi.onWin()
     gameUi.onDraw()
+
+    return sq.innerText
 }
 
-const onUpdateGame = function(e) {
-    e.preventDefault()
+
+
+// const onUpdateGame = function(e) {
+//     e.preventDefault()
     
-    const form = e.target
-    const data = getFormFields(form)
+//     const form = e.target
+//     const data = getFormFields(form)
 
-    gameApi
-        .updateGame(data, data.game._id)
-        .then((response) => gameUi.onUpdateSuccess(response))
-}
+//     // gameApi
+//     //     .updateGame(data, data.game._id)
+//     //     .then((response) => gameUi.onUpdateSuccess(response))
+// }
 
 const onNewGame = function() {
 
     num = 0
+    // turn = true
 
     $('#sq-0').text('')
     $('#sq-1').text('')
@@ -55,7 +75,7 @@ const onNewGame = function() {
     $('#game-grid').on('click', selectedSq)
 
     gameApi
-        .createGame(data)
+        .createGame()
         .then((response) => gameUi.onNewGameSuccess(response))
         // .then((response) => {store.game = response.game})
 }
@@ -63,6 +83,6 @@ const onNewGame = function() {
 module.exports = {
     mark,
     selectedSq,
-    onNewGame,
-    onUpdateGame
+    onNewGame
+    // onUpdateGame
 }
