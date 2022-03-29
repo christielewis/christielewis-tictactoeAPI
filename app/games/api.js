@@ -1,11 +1,13 @@
 const store = require("../store")
+const config = require('../config.js')
 
 const createGame = function(data) {
     console.log(store)
     console.log(data)
     return $.ajax({
         method: 'POST',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/games',
+        url: config.apiUrl + '/games',
+        // url: 'https://tic-tac-toe-api-development.herokuapp.com/games',
         data: data,
         header: {
             Authorization: 'Bearer ' + store.user.token
@@ -18,7 +20,8 @@ const updateGame = function(data, id) {
     console.log(data)
     return $.ajax({
         method: 'POST',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + id,
+        url: config.apiUrl + '/games/' + id,
+        // url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + id,
         data: data,
         header: {
             Authorization: 'Bearer ' + store.user.token

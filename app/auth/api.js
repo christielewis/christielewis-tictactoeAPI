@@ -1,10 +1,11 @@
 const store = require('../store.js')
+const config = require('../config.js')
 
 const signUp = function(data) {
     console.log(store)
     return $.ajax({
         method: 'POST',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
+        url: config.apiUrl + '/sign-up',
         data
     })
 }
@@ -13,7 +14,7 @@ const signIn = function(data) {
     console.log(store)
     return $.ajax({
         method: 'POST',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
+        url: config.apiUrl + '/sign-in',
         data
     })
 }
@@ -33,7 +34,7 @@ const signIn = function(data) {
 const signOut = function() {
     return $.ajax({
         method: 'DELETE',
-        url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
+        url: config.apiUrl + '/sign-out',
         headers: {
             Authorization: 'Bearer ' + store.user.token
         }
