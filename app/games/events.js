@@ -1,4 +1,5 @@
 // const { FALSE } = require('node-sass')
+const getFormFields = require('../../lib/get-form-fields.js')
 const gameApi = require('./api.js')
 const gameUi = require('./ui.js')
 
@@ -16,9 +17,6 @@ let num = 0
 const mark = function(sq) {
     if(num % 2 === 0) {
         sq.innerText = "X"
-        // if(num === 0) {
-        //     sq.innerText = "X"
-        // }
     } else {
         sq.innerText = "O"
     }
@@ -26,6 +24,17 @@ const mark = function(sq) {
     
     gameUi.onWin()
     gameUi.onDraw()
+}
+
+const onUpdateGame = function(e) {
+    e.preventDefault()
+    
+    const form = e.target
+    const data = getFormFields(form)
+
+    gameApi
+        .updateGame(data, data.game._id)
+        .then((response) => gameUi.onUpdateSuccess(response))
 }
 
 const onNewGame = function() {
@@ -44,10 +53,16 @@ const onNewGame = function() {
 
     $('.game-status').text('')
     $('#game-grid').on('click', selectedSq)
+
+    gameApi
+        .createGame(data)
+        .then((response) => gameUi.onNewGameSuccess(response))
+        // .then((response) => {store.game = response.game})
 }
 
 module.exports = {
     mark,
     selectedSq,
-    onNewGame
+    onNewGame,
+    onUpdateGame
 }

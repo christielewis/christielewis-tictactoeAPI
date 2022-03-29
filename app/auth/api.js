@@ -43,6 +43,5 @@ const signOut = function() {
 module.exports = {
     signUp,
     signIn,
-    // changePW,
     signOut
 }

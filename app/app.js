@@ -7,15 +7,18 @@ const gameEvents = require('./games/events.js')
 
 $(() => {
   // your JS code goes here
-  // $('#welcome-sign-up').on('click', authEvents.welcomeSignUp)
-  // $('#welcome-sign-in').on('click', authEvents.welcomeSignUp)
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#games').hide()
+  $('#welcome-sign-up').on('click', authEvents.onWelcomeSignUp)
+  $('#welcome-sign-in').on('click', authEvents.onWelcomeSignIn)
 
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
-  $('#sign-out-form').on('submit', authEvents.onSignOut)
+  $('#sign-out').on('click', authEvents.onSignOut)
   // $('#change-pw-form').on('submit', authEvents.onChangePW)
 
-  $('#game-grid').on('click', gameEvents.selectedSq)
+  $('#game-grid').off('click', gameEvents.selectedSq)
   $('.new-game').on('click', gameEvents.onNewGame)
 
 })

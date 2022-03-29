@@ -12,11 +12,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <h1 id="title">🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
       <div id="welcome-pg">
-        <h1 id="title">🅾️❌ Tic-Tac-Toe ❌🅾️</h1>
-        <h2>New here? Sign up! <br>Returning? Sign in!</h2>
-        <!-- <button id="welcome-sign-up">Sign Up</button>
-        <button id="welcome-sign-in">Sign In</button> -->
+        <h2>New here?</h2>
+        <button id="welcome-sign-up">Sign Up!</button>
+        <h2>Returning?</h2>
+        <button id="welcome-sign-in">Sign In</button>
       </div>
 
       <div class="hidden" id="sign-up">
@@ -26,7 +27,7 @@
           <input type="password" name="credentials[password]" placeholder="Enter password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Re-enter password">
           <button type="submit">Sign Up</button>
-          <section id="auth-status-sign-up"></section>
+          <!-- <section id="auth-status-sign-up"></section> -->
         </form>
       </div>
 
@@ -36,7 +37,7 @@
           <input type="email" name="credentials[email]" placeholder="Enter valid email">
           <input type="password" name="credentials[password]" placeholder="Enter password">
           <button type="submit">Sign In</button>
-          <section id="auth-status-sign-in"></section>
+          <!-- <section id="auth-status-sign-in"></section> -->
         </form>
       </div>
       
@@ -62,19 +63,19 @@
           <div data-sq-idx="7" class="sq" id="sq-7"></div>
           <div data-sq-idx="8" class="sq" id="sq-8"></div>
 
-          </div>
-            <h2 class="game-status"></h2>
-            <button class="new-game">New Game</button>
-            <!-- <button class="game-restart">Restart</button> -->
-          </div>
         </div>
+        <h2 class="game-status"></h2>
+        <button class="new-game">New Game</button>
+        <!-- <button class="game-restart">Restart</button> -->
 
-      <div class="hidden" id="sign-out">
-        <h3>Quitting Already?</h3>
-        <button id="sign-out-btn">Sign Out</button>
-        <section id="auth-status-sign-out"></section>
+        <div class="hidden" id="sign-out">
+          <h3>Quitting Already?</h3>
+          <button id="sign-out-btn">Sign Out</button>
+          <!-- <section id="auth-status-sign-out"></section> -->
+        </div>
       </div>
-      
+
+      <section id="auth-status"></section>
       
       <!-- <div>
         <h3>Index Games</h3>

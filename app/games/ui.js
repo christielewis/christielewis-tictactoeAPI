@@ -1,3 +1,4 @@
+const store = require('../store.js')
 const gameEvents = require('./events.js')
 // create an array to store moves then iterate through it to see if game is over or not
 const onWin = function() {
@@ -78,9 +79,20 @@ const onNewGame = function() {
     $('#game-grid').on('click', gameEvents.selectedSq)
 }
 
+const onNewGameSuccess = function(response) {
+    console.log(response)
+    store.games = response.games
+}
+
+const onUpdateSuccess = function(response) {
+    store.games = response.games
+}
+
 
 module.exports = {
     onWin,
     onDraw,
-    onNewGame
+    onNewGame,
+    onNewGameSuccess,
+    onUpdateSuccess
 }

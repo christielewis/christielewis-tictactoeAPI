@@ -2,33 +2,16 @@ const authApi = require('./api.js')
 const authUi = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
-// const onWelcome = function() {
-//     $('#welcome-pg').show()
-//     $('#welcome-sign-up').show()
-//     $('#welcome-sign-in').show()
-//     $('#sign-up').hide()
-//     $('#sign-in').hide()
-//     $('#sign-out').hide()
-//     $('#games').hide()
-// }
-
-// const onWelcomeSignUp = function() {
-//     $('#welcome-pg').hide()
-//     $('#welcome-sign-up').hide()
-//     $('#welcome-sign-in').hide()
-//     $('#sign-up').hide()
-//     $('#sign-in').hide()
-//     $('#sign-out').hide()
-//     $('#games').hide()
-// }
-
-// const onWelcomeSignIn = function() {
-//     $('#welcome-pg').show()
-//     $('#sign-up').hide()
-//     $('#sign-in').hide()
-//     $('#sign-out').hide()
-//     $('#games').hide()
-// }
+const onWelcomeSignUp = function() {
+    $('#welcome-pg').hide()
+    // $('#title').hide()
+    $('#sign-up').show()
+}
+const onWelcomeSignIn = function() {
+    $('#welcome-pg').hide()
+    $('#sign-up').hide()
+    $('#sign-in').show()
+}
 
 const onSignUp = function(e) {
     e.preventDefault()
@@ -39,14 +22,14 @@ const onSignUp = function(e) {
     console.log(data)
 
     // $('#welcome-pg').show()
-    // $('#title').show()
-    // $('#sign-up').hide()
-    // $('#sign-in').show()
+    $('#welcome-pg').hide()
+    $('#sign-up').hide()
+    $('#sign-in').show()
     // $('#sign-out').hide()
     // $('#games').hide()
 
     if(data.credentials.password !== data.credentials.password_confirmation) {
-        $('#auth-status-sign-up').html('<p>Passwords entered do not match.<br>Try again!</p>');
+        $('#auth-status').html('<p>Passwords entered do not match.<br>Try again!</p>');
     } else {
         authApi.signUp(data)
             .then(() => authUi.onSignUpSuccess())
@@ -63,11 +46,11 @@ const onSignIn = function(e) {
     console.log(data)
 
     // $('#welcome-pg').hide()
-    // $('#title').show()
+    $('#welcome-pg').hide()
     // $('#sign-up').hide()
-    // $('#sign-in').hide()
-    // $('#sign-out').show()
-    // $('#games').show()
+    $('#sign-in').hide()
+    $('#sign-out').show()
+    $('#games').show()
     
     authApi.signIn(data)
         .then((response) => authUi.onSignInSuccess(response))
@@ -91,7 +74,8 @@ const onSignOut = function() {
     // $('#sign-up').show()
     // $('#sign-in').show()
     // $('#sign-out').hide()
-    // $('#games').hide()
+    $('#welcome-pg').show()
+    $('#games').hide()
 
     authApi
         .signOut()
@@ -102,6 +86,8 @@ const onSignOut = function() {
 module.exports = {
     onSignUp,
     onSignIn,
-    onSignOut
+    onSignOut,
+    onWelcomeSignUp,
+    onWelcomeSignIn
     // onChangePW,
 }
