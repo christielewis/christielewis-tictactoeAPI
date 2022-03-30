@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    /* width: 100px;
+    height: 100px; */
+    text-align: center;
+    // font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+div div {
+    border: 2px solid black;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    justify-content: center;
+}
+
+// .hidden {
+//     display: none;
+// }
