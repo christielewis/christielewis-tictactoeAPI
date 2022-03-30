@@ -1,12 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-// div {
-//     /* width: 100px;
-//     height: 100px; */
-//     text-align: center;
-//     font-family: 'Press Start 2P', cursive;
-//     font-size: 2em;
-// }
+
+body {
+    /* width: 100px;
+    height: 100px; */
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
 
 div div {
     border: 2px solid black;
