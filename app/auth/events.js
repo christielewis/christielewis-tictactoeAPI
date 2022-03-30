@@ -24,13 +24,16 @@ const onSignUp = function(e) {
     // $('#welcome-pg').show()
     $('#welcome-pg').hide()
     $('#sign-up').hide()
-    $('#sign-in').show()
+    // $('#sign-in').show()
     // $('#sign-out').hide()
     // $('#games').hide()
-
+    
     if(data.credentials.password !== data.credentials.password_confirmation) {
         $('#auth-status').html('<p>Passwords entered do not match.<br>Try again!</p>');
+        $('#sign-up').show()
     } else {
+        $('#sign-up').hide()
+        $('#sign-in').show()
         authApi.signUp(data)
             .then(() => authUi.onSignUpSuccess())
             .catch(() => authUi.onSignUpFailure())

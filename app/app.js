@@ -22,3 +22,4 @@ $(() => {
   $('.new-game').on('click', gameEvents.onNewGame)
 
 })
+// linear gradients
