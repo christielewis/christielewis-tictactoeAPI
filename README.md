@@ -8,7 +8,9 @@ I am building a functioning, debugged Tic Tac Toe game.
     * user email address, 
     * password, and 
     * password confirmation.
-* User can sign in to their account
+* User can sign in to their account with:
+    * user's email address they used upon sign up
+    * user's password they used upon sign up
 * User can sign out of their account, once signed up.
 * User can play a game of tic-tac-toe
 * User will be able to alternate between "X" and "O" with each click.
