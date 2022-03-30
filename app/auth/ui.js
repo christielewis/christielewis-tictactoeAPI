@@ -11,6 +11,9 @@ const onSignUpFailure = function() {
 }
 const onSignInSuccess = function(response) {
     $('#auth-status').html('<p>Sign In Successful!</p>')
+    $('#sign-in').hide()
+    $('#sign-out').show()
+    $('#games').show()
     $('form').trigger('reset')
     console.log(response)
     store.user = response.user
@@ -22,6 +25,9 @@ const onSignInSuccess = function(response) {
 
 const onSignInFailure = function() {
     $('#auth-status').html('<p>There was an error signing in.<br>Try again!</p>')
+    $('#sign-in').show()
+    $('#sign-out').hide()
+    $('#games').hide()
 }
 
 const onChangePWSuccess = function() {

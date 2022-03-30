@@ -51,9 +51,9 @@ const onSignIn = function(e) {
     // $('#welcome-pg').hide()
     $('#welcome-pg').hide()
     // $('#sign-up').hide()
-    $('#sign-in').hide()
-    $('#sign-out').show()
-    $('#games').show()
+    // $('#sign-in').hide()
+    // $('#sign-out').show()
+    // $('#games').show()
     
     authApi.signIn(data)
         .then((response) => authUi.onSignInSuccess(response))
