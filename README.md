@@ -1,5 +1,8 @@
 # Tic-Tac-Toe 
 
+## Important Links
+[Deployed Client](https://christielewis.github.io/christielewis-tictactoeAPI/)
+
 ## Description
 I am building a functioning, debugged Tic Tac Toe game.
 
@@ -22,5 +25,3 @@ I am building a functioning, debugged Tic Tac Toe game.
 ## Wireframe
 ![Proj1Wireframe](P1_EntireWF.png)
 
-## Important Links
-[Deployed Client](https://christielewis.github.io/christielewis-tictactoeAPI/)
